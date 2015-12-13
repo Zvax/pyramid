@@ -1,31 +1,9 @@
-from dice import Dice
-
+from roller import Roller
 
 print("welcome to the random dice.py emulator\n")
 
-
-def leave():
-    quit()
-
-
-def roll():
-    dice = Dice(1,6)
-    dice.roll()
-
-
-def dispatch(x):
-    if x == 'r':
-        roll()
-    elif x == 'q':
-        leave()
-
+roller = Roller()
 
 while True:
-    char = input("r: roll, q: quit\n")
-    dispatch(char)
-
-
-
-
-
-
+    char = input("r: roll, q: quit, m: change the range\n")
+    roller.dispatch(char)
